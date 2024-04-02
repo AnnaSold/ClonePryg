@@ -16,14 +16,15 @@ public static Frog askCoordinateFrog(){
     return frog;
 }
 
-    public static void askPathKuznechika(){
+    public static int[] askPathKuznechika(){
         System.out.println("Введите количество точек для кузнечика и их координаты");
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();// количество точек для кузнечика
         for (int i = 1; i <=n ; i++) {
+            int[] coordinatKuznechika = new int[n];
             int x = scan.nextInt();
             int y = scan.nextInt();
-            Point point[i] = new Point(x,y);
+            //Point point[ i ] = new Point(x,y);
 
         }
 
@@ -71,7 +72,7 @@ class Point{
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
-        System.out.println("вызван конструктор точки с параметрами "+x+"; "+y);
+        //System.out.println("вызван конструктор точки с параметрами "+x+"; "+y);
     }
 
     public static double calcDistance(Point p1, Point p2){
@@ -86,12 +87,12 @@ class Frog{
     public Frog(Point place, int tongueLength) {
         this.place = place;
         this.tongueLength = tongueLength;
-        System.out.println("вызван конструктор Frog с 2 параметрами");
+        //System.out.println("вызван конструктор Frog с 2 параметрами");
     }
 
     public Frog(int x, int y, int len){
         place = new Point(x, y);
         tongueLength = len;
-        System.out.println("вызван конструктор Frog с 3 параметрами");
+       // System.out.println("вызван конструктор Frog с 3 параметрами");
     }
 }
