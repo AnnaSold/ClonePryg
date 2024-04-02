@@ -1,8 +1,32 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        test1();
+        //test1();
+        System.out.println(askCoordinateFrog());
     }
+public static Frog askCoordinateFrog(){
+    System.out.println("Введите координаты, где на ходится лягушка, и длину языка ");
+    Scanner scan = new Scanner(System.in);
+    Point coordFrog = new Point(0,0);
+    coordFrog.x = scan.nextInt();
+    coordFrog.y = scan.nextInt();
+    int tongueLength = scan.nextInt();
+    Frog frog = new Frog(coordFrog, tongueLength);
+    return frog;
+}
 
+    public static void askPathKuznechika(){
+        System.out.println("Введите количество точек для кузнечика и их координаты");
+        Scanner scan = new Scanner(System.in);
+
+        Point coordFrog = new Point(0,0);
+        coordFrog.x = scan.nextInt();
+        coordFrog.y = scan.nextInt();
+        int tongueLength = scan.nextInt();
+        Frog frog = new Frog(coordFrog, tongueLength);
+
+    }
     public static void test1 ()
     {
         Frog testFrog = new Frog(new Point(0, 0), 1);
