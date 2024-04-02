@@ -19,6 +19,13 @@ public static Frog askCoordinateFrog(){
     public static void askPathKuznechika(){
         System.out.println("Введите количество точек для кузнечика и их координаты");
         Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();// количество точек для кузнечика
+        for (int i = 1; i <=n ; i++) {
+            int x = scan.nextInt();
+            int y = scan.nextInt();
+            Point point[i] = new Point(x,y);
+
+        }
 
         Point coordFrog = new Point(0,0);
         coordFrog.x = scan.nextInt();
